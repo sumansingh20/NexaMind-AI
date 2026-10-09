@@ -1,0 +1,147 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="1200" height="340" role="img" aria-label="NexaMind - Agentic RAG and Document Research Platform">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#060912"/>
+      <stop offset="55%" stop-color="#0a1226"/>
+      <stop offset="100%" stop-color="#0d1a2e"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366f1">
+        <animate attributeName="stop-color" values="#6366f1;#06b6d4;#22c55e;#6366f1" dur="9s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" stop-color="#06b6d4">
+        <animate attributeName="stop-color" values="#06b6d4;#22c55e;#6366f1;#06b6d4" dur="9s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#22c55e">
+        <animate attributeName="stop-color" values="#22c55e;#6366f1;#06b6d4;#22c55e" dur="9s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    <linearGradient id="word" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e2e8ff"/>
+      <stop offset="60%" stop-color="#a5b4fc"/>
+      <stop offset="100%" stop-color="#67e8f9"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#6366f1" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#06b6d4" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#06b6d4" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow3" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#22c55e" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#22c55e" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+    <pattern id="grid" width="38" height="38" patternUnits="userSpaceOnUse">
+      <path d="M38 0H0V38" fill="none" stroke="#1b2750" stroke-opacity="0.5" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <style>
+    @keyframes drift { 0%{transform:translate(0,0)} 50%{transform:translate(24px,-18px)} 100%{transform:translate(0,0)} }
+    @keyframes drift2 { 0%{transform:translate(0,0)} 50%{transform:translate(-26px,16px)} 100%{transform:translate(0,0)} }
+    @keyframes tw { 0%,100%{opacity:.12} 50%{opacity:.95} }
+    @keyframes dash { to { stroke-dashoffset: -220; } }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes sweep { 0%{transform:translateX(-320px)} 100%{transform:translateX(1240px)} }
+    @keyframes blink { 0%,100%{opacity:.3;r:5} 50%{opacity:1;r:8} }
+    .b1{animation:drift 12s ease-in-out infinite}
+    .b2{animation:drift2 14s ease-in-out infinite}
+    .b3{animation:drift 10s ease-in-out infinite}
+    .t1{animation:tw 3s ease-in-out infinite}
+    .t2{animation:tw 4s ease-in-out infinite .6s}
+    .t3{animation:tw 3.4s ease-in-out infinite 1.2s}
+    .t4{animation:tw 4.6s ease-in-out infinite .3s}
+    .fl{stroke-dasharray:7 11;animation:dash 6s linear infinite}
+    .fl2{stroke-dasharray:5 10;animation:dash 3.2s linear infinite}
+    .ring{animation:spin 24s linear infinite;transform-origin:1010px 170px}
+    .sweep{animation:sweep 6.5s linear infinite}
+    .n1{animation:blink 3s ease-in-out infinite}
+    .n2{animation:blink 3s ease-in-out infinite .7s}
+    .n3{animation:blink 3s ease-in-out infinite 1.4s}
+    .n4{animation:blink 3s ease-in-out infinite 2.1s}
+  </style>
+
+  <rect width="1200" height="340" fill="url(#bg)"/>
+  <rect width="1200" height="340" fill="url(#grid)"/>
+  <g class="b1"><circle cx="240" cy="90" r="220" fill="url(#glow1)"/></g>
+  <g class="b2"><circle cx="1000" cy="280" r="240" fill="url(#glow2)"/></g>
+  <g class="b3"><circle cx="720" cy="30" r="170" fill="url(#glow3)"/></g>
+
+  <g fill="#cbd5e1">
+    <circle class="t1" cx="140" cy="60" r="1.8"/>
+    <circle class="t2" cx="360" cy="300" r="2.1"/>
+    <circle class="t3" cx="560" cy="70" r="1.6"/>
+    <circle class="t4" cx="760" cy="310" r="2.0"/>
+    <circle class="t1" cx="940" cy="60" r="1.7"/>
+    <circle class="t3" cx="1140" cy="140" r="2.0"/>
+    <circle class="t2" cx="60" cy="250" r="1.6"/>
+    <circle class="t4" cx="1080" cy="320" r="1.7"/>
+  </g>
+
+  <rect x="0" y="0" width="1200" height="4" fill="url(#accent)"/>
+
+  <g transform="translate(70,120) scale(0.62)">
+    <rect x="0" y="0" width="220" height="220" rx="52" fill="#0b1224" stroke="url(#accent)" stroke-opacity="0.7" stroke-width="3"/>
+    <g stroke="url(#accent)" stroke-width="6" stroke-linecap="round">
+      <line class="fl" x1="110" y1="110" x2="110" y2="46"/>
+      <line class="fl2" x1="110" y1="110" x2="166" y2="78"/>
+      <line class="fl" x1="110" y1="110" x2="166" y2="142"/>
+      <line class="fl2" x1="110" y1="110" x2="110" y2="174"/>
+      <line class="fl" x1="110" y1="110" x2="54" y2="142"/>
+      <line class="fl2" x1="110" y1="110" x2="54" y2="78"/>
+    </g>
+    <g fill="#06b6d4">
+      <circle class="n1" cx="110" cy="46" r="9"/>
+      <circle class="n2" cx="166" cy="78" r="9"/>
+      <circle class="n3" cx="166" cy="142" r="9"/>
+      <circle class="n4" cx="110" cy="174" r="9"/>
+      <circle class="n1" cx="54" cy="142" r="9"/>
+      <circle class="n3" cx="54" cy="78" r="9"/>
+    </g>
+    <circle cx="110" cy="110" r="24" fill="url(#accent)" filter="url(#soft)"/>
+    <circle cx="110" cy="110" r="8" fill="#0b1224"/>
+  </g>
+
+  <text x="232" y="140" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="72" font-weight="800" letter-spacing="1" fill="url(#word)">NexaMind</text>
+  <text x="236" y="184" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="23" font-weight="500" fill="#94a3b8">Agentic RAG &amp; Document Research Platform</text>
+
+  <g font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" font-weight="600">
+    <rect x="236" y="204" width="128" height="32" rx="16" fill="#6366f1" fill-opacity="0.16" stroke="#6366f1" stroke-opacity="0.55"/>
+    <text x="300" y="225" text-anchor="middle" fill="#a5b4fc">Next.js</text>
+    <rect x="374" y="204" width="112" height="32" rx="16" fill="#8b5cf6" fill-opacity="0.16" stroke="#8b5cf6" stroke-opacity="0.55"/>
+    <text x="430" y="225" text-anchor="middle" fill="#c4b5fd">FastAPI</text>
+    <rect x="496" y="204" width="130" height="32" rx="16" fill="#06b6d4" fill-opacity="0.16" stroke="#06b6d4" stroke-opacity="0.55"/>
+    <text x="561" y="225" text-anchor="middle" fill="#67e8f9">LangGraph</text>
+    <rect x="636" y="204" width="122" height="32" rx="16" fill="#0ea5e9" fill-opacity="0.16" stroke="#0ea5e9" stroke-opacity="0.55"/>
+    <text x="697" y="225" text-anchor="middle" fill="#7dd3fc">Gemini</text>
+    <rect x="768" y="204" width="150" height="32" rx="16" fill="#22c55e" fill-opacity="0.14" stroke="#22c55e" stroke-opacity="0.5"/>
+    <text x="843" y="225" text-anchor="middle" fill="#86efac">PostgreSQL</text>
+    <rect x="928" y="204" width="120" height="32" rx="16" fill="#14b8a6" fill-opacity="0.14" stroke="#14b8a6" stroke-opacity="0.5"/>
+    <text x="988" y="225" text-anchor="middle" fill="#5eead4">Qdrant</text>
+  </g>
+
+  <text x="236" y="270" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="14" fill="#64748b">Upload in any format. Ask in plain language. Get answers grounded in your own sources.</text>
+
+  <g transform="translate(1010,170)">
+    <circle class="ring" cx="0" cy="0" r="96" fill="none" stroke="#6366f1" stroke-opacity="0.35" stroke-width="1.5" stroke-dasharray="5 11"/>
+    <circle cx="0" cy="0" r="62" fill="none" stroke="#06b6d4" stroke-opacity="0.4" stroke-width="1.5">
+      <animate attributeName="r" values="46;72;46" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values="0.6;0.05;0.6" dur="6s" repeatCount="indefinite"/>
+    </circle>
+    <g fill="#22c55e">
+      <circle class="n1" cx="0" cy="-66" r="6"/>
+      <circle class="n2" cx="57" cy="33" r="6"/>
+      <circle class="n3" cx="-57" cy="33" r="6"/>
+    </g>
+    <circle cx="0" cy="0" r="30" fill="#0b1224" stroke="url(#accent)" stroke-width="2.5"/>
+    <text x="0" y="7" text-anchor="middle" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="24" font-weight="800" fill="url(#word)">N</text>
+  </g>
+
+  <line x1="70" y1="312" x2="1130" y2="312" stroke="#1b2750" stroke-width="2"/>
+  <rect class="sweep" x="0" y="310" width="320" height="3.5" rx="1.75" fill="url(#accent)"/>
+</svg>

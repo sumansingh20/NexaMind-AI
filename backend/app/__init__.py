@@ -1,0 +1,1 @@
+# NexaMind — app package

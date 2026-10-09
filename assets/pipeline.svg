@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 450" width="1100" height="450" role="img" aria-label="NexaMind ingestion and query pipeline">
+  <defs>
+    <linearGradient id="pbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#060912"/>
+      <stop offset="100%" stop-color="#0c1730"/>
+    </linearGradient>
+    <linearGradient id="flow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <linearGradient id="storeband" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#132a44"/>
+      <stop offset="50%" stop-color="#123a3a"/>
+      <stop offset="100%" stop-color="#132a44"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#06b6d4" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#06b6d4" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="38" height="38" patternUnits="userSpaceOnUse">
+      <path d="M38 0H0V38" fill="none" stroke="#16213f" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <style>
+    @keyframes dash { to { stroke-dashoffset: -140; } }
+    .fl{stroke-dasharray:8 12;animation:dash 5s linear infinite}
+  </style>
+
+  <rect width="1100" height="450" rx="18" fill="url(#pbg)"/>
+  <rect width="1100" height="450" rx="18" fill="url(#grid)"/>
+
+  <text x="60" y="44" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="22" font-weight="800" fill="url(#flow)">Ingestion and query pipeline</text>
+
+  <text x="60" y="80" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="2" fill="#64748b">INGEST</text>
+  <text x="60" y="312" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="2" fill="#64748b">QUERY</text>
+
+  <line x1="95" y1="112" x2="1005" y2="112" stroke="url(#flow)" stroke-width="3" class="fl" stroke-linecap="round"/>
+
+  <g font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="15" fill="#e2e8f0" text-anchor="middle">
+    <g>
+      <circle cx="170" cy="112" r="58" fill="url(#halo)" opacity="0">
+        <animate attributeName="opacity" values="0;0.35;0;0" keyTimes="0;0.08;0.25;1" dur="3.4s" begin="0s" repeatCount="indefinite"/>
+      </circle>
+      <rect x="95" y="80" width="150" height="64" rx="14" fill="#111827" stroke="#243044"/>
+      <text x="170" y="119">Upload</text>
+    </g>
+    <g>
+      <circle cx="360" cy="112" r="58" fill="url(#halo)" opacity="0">
+        <animate attributeName="opacity" values="0;0.35;0;0" keyTimes="0;0.08;0.25;1" dur="3.4s" begin="0.55s" repeatCount="indefinite"/>
+      </circle>
+      <rect x="285" y="80" width="150" height="64" rx="14" fill="#111827" stroke="#243044"/>
+      <text x="360" y="119">Parse</text>
+    </g>
+    <g>
+      <circle cx="550" cy="112" r="58" fill="url(#halo)" opacity="0">
+        <animate attributeName="opacity" values="0;0.35;0;0" keyTimes="0;0.08;0.25;1" dur="3.4s" begin="1.1s" repeatCount="indefinite"/>
+      </circle>
+      <rect x="475" y="80" width="150" height="64" rx="14" fill="#111827" stroke="#243044"/>
+      <text x="550" y="119">Chunk</text>
+    </g>
+    <g>
+      <circle cx="740" cy="112" r="58" fill="url(#halo)" opacity="0">
+        <animate attributeName="opacity" values="0;0.35;0;0" keyTimes="0;0.08;0.25;1" dur="3.4s" begin="1.65s" repeatCount="indefinite"/>
+      </circle>
+      <rect x="665" y="80" width="150" height="64" rx="14" fill="#111827" stroke="#243044"/>
+      <text x="740" y="119">Embed</text>
+    </g>
+    <g>
+      <circle cx="930" cy="112" r="58" fill="url(#halo)" opacity="0">
+        <animate attributeName="opacity" values="0;0.35;0;0" keyTimes="0;0.08;0.25;1" dur="3.4s" begin="2.2s" repeatCount="indefinite"/>
+      </circle>
+      <rect x="855" y="80" width="150" height="64" rx="14" fill="#111827" stroke="#243044"/>
+      <text x="930" y="119">Store</text>
+    </g>
+  </g>
+
+  <circle r="5" fill="#7df9ff"><animateMotion dur="3.4s" repeatCount="indefinite" path="M95 112 L1005 112"/></circle>
+  <circle r="3.5" opacity="0.55"><animateMotion dur="3.4s" begin="0.14s" repeatCount="indefinite" path="M95 112 L1005 112"/></circle>
+  <circle r="2.6" opacity="0.35"><animateMotion dur="3.4s" begin="0.28s" repeatCount="indefinite" path="M95 112 L1005 112"/></circle>
+
+  <rect x="95" y="200" width="910" height="60" rx="16" fill="url(#storeband)" stroke="#1f5a5a"/>
+  <text x="360" y="236" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="15" font-weight="600" fill="#a5f3fc" text-anchor="middle">PostgreSQL  ·  metadata</text>
+  <line x1="560" y1="214" x2="560" y2="246" stroke="#2a3b57" stroke-width="2"/>
+  <text x="735" y="236" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="15" font-weight="600" fill="#5eead4" text-anchor="middle">Qdrant  ·  vectors</text>
+
+  <line x1="930" y1="144" x2="930" y2="198" stroke="#2a3b57" stroke-width="2"/>
+  <circle r="4" fill="#22c55e"><animateMotion dur="1.2s" repeatCount="indefinite" path="M930 146 L930 196"/></circle>
+
+  <line x1="435" y1="260" x2="435" y2="306" stroke="#2a3b57" stroke-width="2"/>
+  <circle r="4" fill="#06b6d4"><animateMotion dur="1.2s" repeatCount="indefinite" path="M435 304 L435 262"/></circle>
+
+  <line x1="120" y1="332" x2="980" y2="332" stroke="url(#flow)" stroke-width="3" class="fl" stroke-linecap="round"/>
+
+  <g font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="15" fill="#e2e8f0" text-anchor="middle">
+    <g>
+      <circle cx="205" cy="332" r="58" fill="url(#halo)" opacity="0">
+        <animate attributeName="opacity" values="0;0.35;0;0" keyTimes="0;0.08;0.25;1" dur="3.4s" begin="0s" repeatCount="indefinite"/>
+      </circle>
+      <rect x="120" y="300" width="170" height="64" rx="14" fill="#111827" stroke="#243044"/>
+      <text x="205" y="339">Question</text>
+    </g>
+    <g>
+      <circle cx="435" cy="332" r="58" fill="url(#halo)" opacity="0">
+        <animate attributeName="opacity" values="0;0.35;0;0" keyTimes="0;0.08;0.25;1" dur="3.4s" begin="0.55s" repeatCount="indefinite"/>
+      </circle>
+      <rect x="350" y="300" width="170" height="64" rx="14" fill="#111827" stroke="#243044"/>
+      <text x="435" y="339">Retrieve</text>
+    </g>
+    <g>
+      <circle cx="665" cy="332" r="58" fill="url(#halo)" opacity="0">
+        <animate attributeName="opacity" values="0;0.35;0;0" keyTimes="0;0.08;0.25;1" dur="3.4s" begin="1.1s" repeatCount="indefinite"/>
+      </circle>
+      <rect x="580" y="300" width="170" height="64" rx="14" fill="#111827" stroke="#243044"/>
+      <text x="665" y="339">Generate</text>
+    </g>
+    <g>
+      <circle cx="895" cy="332" r="62" fill="url(#halo)" opacity="0">
+        <animate attributeName="opacity" values="0;0.35;0;0" keyTimes="0;0.08;0.25;1" dur="3.4s" begin="1.65s" repeatCount="indefinite"/>
+      </circle>
+      <rect x="810" y="300" width="170" height="64" rx="14" fill="#0d2b33" stroke="#22d3ee"/>
+      <text x="895" y="339">Answer</text>
+    </g>
+  </g>
+
+  <circle r="5" fill="#7df9ff"><animateMotion dur="3.4s" repeatCount="indefinite" path="M120 332 L980 332"/></circle>
+  <circle r="3.5" opacity="0.55"><animateMotion dur="3.4s" begin="0.14s" repeatCount="indefinite" path="M120 332 L980 332"/></circle>
+
+  <text x="550" y="424" text-anchor="middle" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#64748b">streamed to the browser as server-sent events: sources first, then tokens</text>
+</svg>

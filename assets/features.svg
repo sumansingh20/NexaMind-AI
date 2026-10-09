@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 430" width="1040" height="430" role="img" aria-label="NexaMind capabilities">
+  <defs>
+    <linearGradient id="fbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#060912"/>
+      <stop offset="100%" stop-color="#0c1730"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366f1">
+        <animate attributeName="stop-color" values="#6366f1;#06b6d4;#22c55e;#6366f1" dur="9s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#06b6d4">
+        <animate attributeName="stop-color" values="#06b6d4;#22c55e;#6366f1;#06b6d4" dur="9s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    <pattern id="grid" width="38" height="38" patternUnits="userSpaceOnUse">
+      <path d="M38 0H0V38" fill="none" stroke="#16213f" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <style>
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @keyframes dash { to { stroke-dashoffset: -60; } }
+    @keyframes blink { 0%,100%{opacity:.4} 50%{opacity:1} }
+    .spin{animation:spin 9s linear infinite;transform-origin:center}
+    .dash{stroke-dasharray:5 7;animation:dash 3s linear infinite}
+    .blink{animation:blink 2.6s ease-in-out infinite}
+  </style>
+
+  <rect width="1040" height="430" rx="18" fill="url(#fbg)"/>
+  <rect width="1040" height="430" rx="18" fill="url(#grid)"/>
+  <text x="44" y="48" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="22" font-weight="800" fill="url(#accent)">What it handles</text>
+
+  <g font-family="'Segoe UI',Helvetica,Arial,sans-serif">
+    <!-- Card 1 -->
+    <rect x="40" y="70" width="304" height="150" rx="16" fill="#111827" stroke="#243044"/>
+    <circle cx="86" cy="116" r="26" fill="#6366f1" fill-opacity="0.14" stroke="#6366f1" stroke-opacity="0.6"/>
+    <g stroke="#a5b4fc" stroke-width="2" fill="none">
+      <rect x="76" y="104" width="20" height="26" rx="3"/>
+      <line x1="80" y1="111" x2="92" y2="111"/>
+      <line x1="80" y1="118" x2="92" y2="118"/>
+    </g>
+    <text x="126" y="112" font-size="16" font-weight="700" fill="#e2e8f0">Multi-format parsing</text>
+    <text x="126" y="134" font-size="12" fill="#8a99b8">PDF, DOCX, PPTX, XLSX, CSV,</text>
+    <text x="126" y="152" font-size="12" fill="#8a99b8">TXT, Markdown and images (OCR).</text>
+
+    <!-- Card 2 -->
+    <rect x="368" y="70" width="304" height="150" rx="16" fill="#111827" stroke="#243044"/>
+    <circle cx="414" cy="116" r="26" fill="#06b6d4" fill-opacity="0.14" stroke="#06b6d4" stroke-opacity="0.6"/>
+    <g stroke="#67e8f9" stroke-width="2" fill="none">
+      <rect x="402" y="105" width="16" height="16" rx="3"/>
+      <rect x="410" y="113" width="16" height="16" rx="3"/>
+      <path d="M410 118 l3 3 l5 -6"/>
+    </g>
+    <text x="454" y="112" font-size="16" font-weight="700" fill="#e2e8f0">Duplicate detection</text>
+    <text x="454" y="134" font-size="12" fill="#8a99b8">Re-uploading the same file will</text>
+    <text x="454" y="152" font-size="12" fill="#8a99b8">not index it a second time.</text>
+
+    <!-- Card 3 -->
+    <rect x="696" y="70" width="304" height="150" rx="16" fill="#111827" stroke="#243044"/>
+    <circle cx="742" cy="116" r="26" fill="#22c55e" fill-opacity="0.14" stroke="#22c55e" stroke-opacity="0.6"/>
+    <g stroke="#86efac" stroke-width="2" fill="none">
+      <circle cx="742" cy="116" r="13" class="dash"/>
+      <path d="M742 109 v7 l5 3"/>
+    </g>
+    <text x="782" y="112" font-size="16" font-weight="700" fill="#e2e8f0">Resumable indexing</text>
+    <text x="782" y="134" font-size="12" fill="#8a99b8">Deterministic chunk IDs let an</text>
+    <text x="782" y="152" font-size="12" fill="#8a99b8">interrupted run pick up where it left off.</text>
+
+    <!-- Card 4 -->
+    <rect x="40" y="244" width="304" height="150" rx="16" fill="#111827" stroke="#243044"/>
+    <circle cx="86" cy="290" r="26" fill="#8b5cf6" fill-opacity="0.14" stroke="#8b5cf6" stroke-opacity="0.6"/>
+    <g stroke="#c4b5fd" stroke-width="2" fill="none">
+      <path d="M78 282 h16 l-2 20 h-12 z"/>
+      <line x1="81" y1="286" x2="91" y2="286"/>
+      <path d="M84 278 v-4 h4 v4"/>
+    </g>
+    <text x="126" y="286" font-size="16" font-weight="700" fill="#e2e8f0">Safe deletion</text>
+    <text x="126" y="308" font-size="12" fill="#8a99b8">Vectors go first, then the row, so a</text>
+    <text x="126" y="326" font-size="12" fill="#8a99b8">failed delete can always be retried.</text>
+
+    <!-- Card 5 -->
+    <rect x="368" y="244" width="304" height="150" rx="16" fill="#111827" stroke="#243044"/>
+    <circle cx="414" cy="290" r="26" fill="#0ea5e9" fill-opacity="0.14" stroke="#0ea5e9" stroke-opacity="0.6"/>
+    <g stroke="#7dd3fc" stroke-width="2" fill="none">
+      <path d="M400 280 h28 v16 h-16 l-8 8 v-8 h-4 z"/>
+      <circle class="blink" cx="408" cy="288" r="1.6" fill="#7dd3fc"/>
+      <circle class="blink" cx="414" cy="288" r="1.6" fill="#7dd3fc"/>
+      <circle class="blink" cx="420" cy="288" r="1.6" fill="#7dd3fc"/>
+    </g>
+    <text x="454" y="286" font-size="16" font-weight="700" fill="#e2e8f0">Grounded answers</text>
+    <text x="454" y="308" font-size="12" fill="#8a99b8">Streamed tokens with the exact</text>
+    <text x="454" y="326" font-size="12" fill="#8a99b8">source chunks attached.</text>
+
+    <!-- Card 6 -->
+    <rect x="696" y="244" width="304" height="150" rx="16" fill="#111827" stroke="#243044"/>
+    <circle cx="742" cy="290" r="26" fill="#14b8a6" fill-opacity="0.14" stroke="#14b8a6" stroke-opacity="0.6"/>
+    <g stroke="#5eead4" stroke-width="2" fill="none">
+      <rect x="729" y="280" width="26" height="20" rx="3"/>
+      <line x1="729" y1="287" x2="755" y2="287"/>
+      <circle class="blink" cx="735" cy="294" r="2" fill="#5eead4"/>
+      <line x1="741" y1="294" x2="751" y2="294"/>
+    </g>
+    <text x="782" y="286" font-size="16" font-weight="700" fill="#e2e8f0">Live dashboard</text>
+    <text x="782" y="308" font-size="12" fill="#8a99b8">Service health, document and chunk</text>
+    <text x="782" y="326" font-size="12" fill="#8a99b8">counts, and collection management.</text>
+  </g>
+</svg>

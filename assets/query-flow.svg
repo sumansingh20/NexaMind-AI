@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 360" width="1040" height="360" role="img" aria-label="NexaMind streaming query flow">
+  <defs>
+    <linearGradient id="qbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#060912"/>
+      <stop offset="100%" stop-color="#0c1730"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <pattern id="grid" width="38" height="38" patternUnits="userSpaceOnUse">
+      <path d="M38 0H0V38" fill="none" stroke="#16213f" stroke-width="1"/>
+    </pattern>
+    <clipPath id="reveal">
+      <rect x="600" y="128" width="372" height="0">
+        <animate attributeName="height" values="0;0;150;150;0" keyTimes="0;0.1;0.7;0.9;1" dur="6s" repeatCount="indefinite"/>
+      </rect>
+    </clipPath>
+    <marker id="ar" markerWidth="10" markerHeight="10" refX="7" refY="4" orient="auto">
+      <path d="M0 0 L8 4 L0 8 z" fill="#06b6d4"/>
+    </marker>
+  </defs>
+
+  <style>
+    @keyframes dash { to { stroke-dashoffset: -80; } }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+    @keyframes dot { 0%,60%,100%{opacity:.25;transform:translateY(0)} 30%{opacity:1;transform:translateY(-4px)} }
+    .fl{stroke-dasharray:7 9;animation:dash 2.6s linear infinite}
+    .caret{animation:blink 1s steps(1) infinite}
+    .d1{animation:dot 1.4s ease-in-out infinite}
+    .d2{animation:dot 1.4s ease-in-out infinite .2s}
+    .d3{animation:dot 1.4s ease-in-out infinite .4s}
+  </style>
+
+  <rect width="1040" height="360" rx="18" fill="url(#qbg)"/>
+  <rect width="1040" height="360" rx="18" fill="url(#grid)"/>
+  <text x="44" y="46" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="22" font-weight="800" fill="url(#accent)">How a query flows</text>
+
+  <g font-family="'Segoe UI',Helvetica,Arial,sans-serif">
+    <rect x="46" y="120" width="252" height="96" rx="16" fill="#111827" stroke="#243044"/>
+    <text x="70" y="156" font-size="14" fill="#8a99b8">Question</text>
+    <text x="70" y="182" font-size="15" fill="#e2e8f0">How did revenue change?</text>
+    <text x="70" y="204" font-size="12" fill="#64748b">no context restated, just the ask</text>
+
+    <line x1="300" y1="168" x2="392" y2="168" stroke="url(#accent)" stroke-width="3" class="fl" stroke-linecap="round" marker-end="url(#ar)"/>
+
+    <circle cx="440" cy="168" r="36" fill="#111827" stroke="url(#accent)" stroke-width="2"/>
+    <circle cx="440" cy="168" r="46" fill="none" stroke="#06b6d4" stroke-opacity="0.4" stroke-width="1.5">
+      <animate attributeName="r" values="40;52;40" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values="0.5;0.05;0.5" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <text x="440" y="164" text-anchor="middle" font-size="12" fill="#a5f3fc">Top-K</text>
+    <text x="440" y="180" text-anchor="middle" font-size="10" fill="#64748b">retrieve</text>
+
+    <line x1="486" y1="168" x2="574" y2="168" stroke="url(#accent)" stroke-width="3" class="fl" stroke-linecap="round" marker-end="url(#ar)"/>
+
+    <rect x="580" y="70" width="414" height="238" rx="16" fill="#0d1324" stroke="#243044"/>
+    <text x="600" y="100" font-size="13" font-weight="700" fill="#64748b" letter-spacing="1">ANSWER  ·  STREAMED</text>
+
+    <g clip-path="url(#reveal)" font-size="14" fill="#dbe3f4">
+      <text x="600" y="128">Revenue grew 18% year over year, driven</text>
+      <text x="600" y="152">mainly by the cloud segment, which added</text>
+      <text x="600" y="176">roughly 9 points of growth. Operating</text>
+      <text x="600" y="200">margin expanded by 220 basis points.</text>
+      <text x="600" y="224">Sources are attached to the right.</text>
+    </g>
+    <rect class="caret" x="600" y="210" width="9" height="16" fill="#67e8f9">
+      <animate attributeName="x" values="600;792;600" dur="6s" repeatCount="indefinite"/>
+    </rect>
+
+    <g font-size="11" fill="#c4b5fd">
+      <rect x="600" y="252" width="96" height="28" rx="14" fill="#6366f1" fill-opacity="0.16" stroke="#6366f1" stroke-opacity="0.5"/>
+      <text x="648" y="270" text-anchor="middle">annual-10k</text>
+      <rect x="706" y="252" width="90" height="28" rx="14" fill="#06b6d4" fill-opacity="0.16" stroke="#06b6d4" stroke-opacity="0.5"/>
+      <text x="751" y="270" text-anchor="middle">q4-report</text>
+      <rect x="806" y="252" width="104" height="28" rx="14" fill="#22c55e" fill-opacity="0.14" stroke="#22c55e" stroke-opacity="0.5"/>
+      <text x="858" y="270" text-anchor="middle">investor-note</text>
+    </g>
+  </g>
+
+  <text x="520" y="342" text-anchor="middle" font-family="'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#64748b">events arrive as data frames: thinking, sources, chunk, done</text>
+</svg>
